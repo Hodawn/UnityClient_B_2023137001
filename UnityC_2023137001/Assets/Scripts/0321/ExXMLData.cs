@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Xml.Serialization;     //xml 사용하기위해
+using System.IO;
 
 public class PlayerData
 {
     public string playerName;
     public int playerLevel;
-    public List<string> items+new List<string>();
+    public List<string> items=new List<string>();
 }
 public class ExXMLData : MonoBehaviour
 {
@@ -53,9 +55,10 @@ public class ExXMLData : MonoBehaviour
     }
     PlayerData LoadData()
     {
-        if (File.Exists(filePath){
+        if (File.Exists(filePath))
+        {
             XmlSerializer serializer = new XmlSerializer(typeof(PlayerData));
-            FileStream steam = new FileStream(filePath, FileMode.open);
+            FileStream steam = new FileStream(filePath, FileMode.Open);
             PlayerData data = (PlayerData)serializer.Deserialize(steam);
             steam.Close();
             return data;

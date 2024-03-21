@@ -9,9 +9,9 @@ public class ExGetData : MonoBehaviour
     private void Start()
     {
 
-       foreach(Entity_Monster.Param param in monster sheets[0].list)
+       foreach(Entity_Monster.Param param in monster.sheets[0].list)
         {
-            Debug.Log(param.index)
+            Debug.Log(param.index+"-"+param.name+"="+param.hp+"-"+param.mp);
         }
     }
 }
