@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class ExEnemy : MonoBehaviour
 {
+    //적이 플레이어에 주는 피해량
+    public int damage = 20;
     public ExPlayer targetPlayer;
-    private int damage = 20;
+    
     public void AttackPlayer(ExPlayer player)
     {
         player.TakeDamage(damage);
