@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyNumber: 1
   storyType: 1
-  storyDone: 0
+  storyDone: 1
   storyText: 
   options:
   - optionText: "\uACF5\uACA9\uD55C\uB2E4."

@@ -30,11 +30,11 @@ namespace STORYGAME
 
 #endif
 
-    public class GameSystem : MonoBehaviour
+    public class GameSystem : ScriptableObject
     {
         public static GameSystem Instance;
 
-       
+
         private void Awake()
         {
             Instance = this;
@@ -52,6 +52,9 @@ namespace STORYGAME
         public StoryModel[] storyModels;
         public int currentStoryIndex = 0;
 
+
+
+
         public void ChangeState(GAMESTATE temp)
         {
             currentState = temp;
@@ -65,8 +68,8 @@ namespace STORYGAME
         {
             StoryModel tempStroyModels = FindStoryModel(number);
 
-            //StorySystem.Instance.currentStoryModel=tempStroyModels;
-            //StorySystem.Instance.CoShowText();
+            StorySystem.instance.currentStoryModel = tempStroyModels;
+            StorySystem.instance.CoShowText();
         }
         public void ApplyChoice(StoryModel.Result result)
         {
@@ -95,7 +98,7 @@ namespace STORYGAME
                     Debug.LogError("UnKnown effect Type");
                     break;
             }
-            
+
         }
 
         public void ChangeStats(StoryModel.Result result)       //상태 변경 함수
@@ -116,49 +119,13 @@ namespace STORYGAME
             if (result.stats.Charisma > 0) stats.Charisma += result.stats.Charisma;
 
         }
-
-        StoryModel FindStoryModel(int number)
-        {
-            StoryModel tempstoryModels = null;
-
-            List<StoryModel> StoryModelList = new List<StoryModel>();
-
-            for(int i=0; i < storyModels.Length; i++)
-            {
-                if (storyModels[i].storyNumber == number)
-                    {
-                        tempstoryModels = storyModels[i];
-                break;
-                    }
-            }
-
-            tempstoryModels = StoryModelList[Random.Range(0, StoryModelList.Count)];   //Main 들만 있는 리스트에서 랜덤으로 스토리 진행
-            currentStoryIndex = tempstoryModels.storyNumber;
-            Debug.Log("currentStoryIndex" + currentStoryIndex);
-
-
-            return tempstoryModels;
-        }
-        
-      
-        
-#if UNITY_EDITOR
-        [ContextMenu("Reset Story Models")]
-
-        public void ResetStoryModels()
-        {
-            storyModels = Resources.LoadAll<StoryModel>("");
-        //Resources 폴더 아래 모든 StoryModel 불러오기
-        }
-#endif
-    
         StoryModel RandomStory()
         {
             StoryModel tempStoryModels = null;
 
             List<StoryModel> StoryModelList = new List<StoryModel>();
 
-            for(int i=0; i< storyModels.Length; i++)
+            for (int i = 0; i < storyModels.Length; i++)
             {
                 if (storyModels[i].storyType == StoryModel.STORYTYPE.MAIN)
                 {
@@ -171,5 +138,39 @@ namespace STORYGAME
 
             return tempStoryModels;
         }
+
+        StoryModel FindStoryModel(int number)
+        {
+            StoryModel tempstoryModels = null;
+
+
+
+            for (int i = 0; i < storyModels.Length; i++)
+            {
+                if (storyModels[i].storyNumber == number)
+                {
+                    tempstoryModels = storyModels[i];
+                    break;
+                }
+            }
+
+
+
+            return tempstoryModels;
+        }
+
+
+
+#if UNITY_EDITOR
+        [ContextMenu("Reset Story Models")]
+
+        public void ResetStoryModels()
+        {
+            storyModels = Resources.LoadAll<StoryModel>("");
+            //Resources 폴더 아래 모든 StoryModel 불러오기
+        }
+#endif
+
+    }
 }
 
