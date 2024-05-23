@@ -826,6 +826,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624259990}
   m_CullTransparentMesh: 1
+--- !u!1 &646204766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 646204768}
+  - component: {fileID: 646204767}
+  m_Layer: 0
+  m_Name: StorySystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &646204767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646204766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1805390203b9b2140bd525928573d9d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStoryModel: {fileID: 0}
+  delay: 0.1
+  fullText: 
+  currentText: 
+  textComponent: {fileID: 1297706306}
+  storyIndex: {fileID: 624259992}
+  imageComponent: {fileID: 648303455}
+  buttonWay:
+  - {fileID: 1314388205}
+  - {fileID: 1519277145}
+  - {fileID: 336069019}
+  buttonWayText:
+  - {fileID: 436676349}
+  - {fileID: 143906658}
+  - {fileID: 982472911}
+--- !u!4 &646204768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646204766}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 694.5142, y: 721.0774, z: -4.8319197}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &648303453
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +942,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e26632bb7c02cc64f81f31f4f9283035, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -910,6 +969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 758845758}
+  - component: {fileID: 758845759}
   m_Layer: 0
   m_Name: GameSystem
   m_TagString: Untagged
@@ -932,6 +992,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &758845759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758845757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd9d3f42e2f0374ba1d0dbe00372990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 0
+  stats:
+    hpPoint: 0
+    spPoint: 0
+    currentHpPoint: 0
+    currentSpPoint: 0
+    currentXpPoint: 0
+    strength: 0
+    dexterity: 0
+    consitiution: 0
+    Intelligence: 0
+    wisdom: 0
+    Charisma: 0
+  storyModels:
+  - {fileID: 11400000, guid: 595a1ed7c8c917e47b1ea42444173c0c, type: 2}
+  - {fileID: 11400000, guid: fce7ba4addd34354e9855e0f45f82304, type: 2}
+  currentStoryIndex: 0
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1614,3 +1703,4 @@ SceneRoots:
   - {fileID: 1414180611}
   - {fileID: 1071290778}
   - {fileID: 758845758}
+  - {fileID: 646204768}

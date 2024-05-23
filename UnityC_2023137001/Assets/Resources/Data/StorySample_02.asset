@@ -20,7 +20,22 @@ MonoBehaviour:
   options:
   - optionText: 
     buttonText: "\uC120\uD0DD\uC9C01"
+    eventCheck:
+      checkValue: 0
+      type: 0
+      successResult: []
+      failResult: []
   - optionText: 
     buttonText: "\uC120\uD0DD\uC9C02"
+    eventCheck:
+      checkValue: 0
+      type: 0
+      successResult: []
+      failResult: []
   - optionText: 
     buttonText: "\uC120\uD0DD\uC9C03"
+    eventCheck:
+      checkValue: 0
+      type: 0
+      successResult: []
+      failResult: []
