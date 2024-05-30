@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 27313060}
   - component: {fileID: 27313059}
   m_Layer: 0
-  m_Name: Cube (5)
+  m_Name: Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -286,14 +286,13 @@ MonoBehaviour:
   currentState: 3
   IsMoveDone: 0
   target: {fileID: 0}
-  counter: {fileID: 0}
+  counter: {fileID: 27313058}
   targetPos:
   - {fileID: 300184798}
   - {fileID: 1246934845}
   - {fileID: 1298716922}
   - {fileID: 1960881394}
   - {fileID: 1364285326}
-  - {fileID: 27313057}
   myBox: []
   boxesToPick: 5
 --- !u!136 &41683318
@@ -442,14 +441,13 @@ MonoBehaviour:
   currentState: 3
   IsMoveDone: 0
   target: {fileID: 0}
-  counter: {fileID: 0}
+  counter: {fileID: 27313058}
   targetPos:
   - {fileID: 300184798}
   - {fileID: 1246934845}
   - {fileID: 1298716922}
   - {fileID: 1960881394}
   - {fileID: 1364285326}
-  - {fileID: 27313057}
   myBox: []
   boxesToPick: 5
 --- !u!136 &87342439
@@ -703,14 +701,13 @@ MonoBehaviour:
   currentState: 3
   IsMoveDone: 0
   target: {fileID: 0}
-  counter: {fileID: 0}
+  counter: {fileID: 27313058}
   targetPos:
   - {fileID: 300184798}
   - {fileID: 1246934845}
   - {fileID: 1298716922}
   - {fileID: 1960881394}
   - {fileID: 1364285326}
-  - {fileID: 27313057}
   myBox: []
   boxesToPick: 5
 --- !u!136 &863886216
@@ -951,14 +948,13 @@ MonoBehaviour:
   currentState: 3
   IsMoveDone: 0
   target: {fileID: 0}
-  counter: {fileID: 0}
+  counter: {fileID: 27313058}
   targetPos:
   - {fileID: 300184798}
   - {fileID: 1246934845}
   - {fileID: 1298716922}
   - {fileID: 1960881394}
   - {fileID: 1364285326}
-  - {fileID: 27313057}
   myBox: []
   boxesToPick: 5
 --- !u!136 &931389388
@@ -1295,14 +1291,13 @@ MonoBehaviour:
   currentState: 3
   IsMoveDone: 0
   target: {fileID: 0}
-  counter: {fileID: 0}
+  counter: {fileID: 27313058}
   targetPos:
   - {fileID: 300184798}
   - {fileID: 1246934845}
   - {fileID: 1298716922}
   - {fileID: 1960881394}
   - {fileID: 1364285326}
-  - {fileID: 27313057}
   myBox: []
   boxesToPick: 5
 --- !u!136 &1325231397
@@ -1578,14 +1573,13 @@ MonoBehaviour:
   currentState: 3
   IsMoveDone: 0
   target: {fileID: 0}
-  counter: {fileID: 0}
+  counter: {fileID: 27313058}
   targetPos:
   - {fileID: 300184798}
   - {fileID: 1246934845}
   - {fileID: 1298716922}
   - {fileID: 1960881394}
   - {fileID: 1364285326}
-  - {fileID: 27313057}
   myBox: []
   boxesToPick: 5
 --- !u!136 &1481174967
@@ -1734,14 +1728,13 @@ MonoBehaviour:
   currentState: 3
   IsMoveDone: 0
   target: {fileID: 0}
-  counter: {fileID: 0}
+  counter: {fileID: 27313058}
   targetPos:
   - {fileID: 300184798}
   - {fileID: 1246934845}
   - {fileID: 1298716922}
   - {fileID: 1960881394}
   - {fileID: 1364285326}
-  - {fileID: 27313057}
   myBox: []
   boxesToPick: 5
 --- !u!136 &1563491296
@@ -2184,14 +2177,13 @@ MonoBehaviour:
   currentState: 3
   IsMoveDone: 0
   target: {fileID: 0}
-  counter: {fileID: 0}
+  counter: {fileID: 27313058}
   targetPos:
   - {fileID: 300184798}
   - {fileID: 1246934845}
   - {fileID: 1298716922}
   - {fileID: 1960881394}
   - {fileID: 1364285326}
-  - {fileID: 27313057}
   myBox: []
   boxesToPick: 5
 --- !u!136 &1822666824
@@ -2445,14 +2437,13 @@ MonoBehaviour:
   currentState: 3
   IsMoveDone: 0
   target: {fileID: 0}
-  counter: {fileID: 0}
+  counter: {fileID: 27313058}
   targetPos:
   - {fileID: 300184798}
   - {fileID: 1246934845}
   - {fileID: 1298716922}
   - {fileID: 1960881394}
   - {fileID: 1364285326}
-  - {fileID: 27313057}
   myBox: []
   boxesToPick: 5
 --- !u!136 &1961105960

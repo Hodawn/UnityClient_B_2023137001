@@ -118,6 +118,19 @@ public class CustomerFSM : MonoBehaviour
         if (timer.IsFinished())
         {
 
+            //상자 생성
+            if (boxesPicked < boxesToPick)
+            {
+                GameObject box = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                myBox.Add(box);
+                box.transform.parent = gameObject.transform;
+                box.transform.localEulerAngles = Vector3.zero;
+                box.transform.localPosition = new Vector3(0, boxesPicked * 2f, 0);
+
+                boxesPicked++;
+                timer.Set(0.5f);            //다음 상자 생성까지 대기 시간 설정
+            }
+
             target = counter;
             MoveToTarget();
             ChangeState(CustomerState.WalkingToCounter, 2.0F);
@@ -134,6 +147,22 @@ public class CustomerFSM : MonoBehaviour
     {
         if (timer.IsFinished())
         {
+            if (myBox.Count != 0)
+            {
+                if(myBox.Count != 0)
+                {
+                    myBox[0].transform.position = counter.transform.position;
+                    myBox[0].transform.parent = counter.transform;
+                    myBox.RemoveAt(0);
+
+                    timer.Set(0.1f);
+                }
+
+                else
+                {
+                    ChangeState(CustomerState.Idle, 2.0f);
+                }
+            }
             ChangeState(CustomerState.Idle, 2.0f);
         }
     }
